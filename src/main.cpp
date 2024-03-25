@@ -13,7 +13,7 @@ struct EthArpPacket final {
 #pragma pack(pop)
 
 void usage() {
-    printf("syntax: send-arp-test <interface> <sender(victim) ip> <target(gateway ip>\n");
+    printf("syntax: send-arp-test <interface> <sender(victim) ip> <target(gateway ip> ...\n");
     printf("sample: send-arp-test wlan0 192.168.0.1 192.168.0.10\n");
 }
 
