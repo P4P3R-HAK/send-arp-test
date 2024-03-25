@@ -39,6 +39,13 @@ Mac& Mac::broadcastMac() {
 	return res;
 }
 
+Mac& Mac::myMac(const std::string& dev) {
+    std::ifstream iface("/sys/class/net/" + dev + "/address");
+    std::string str((std::istreambuf_iterator<char>(iface)), std::istreambuf_iterator<char>());
+    static Mac res(str);
+    return res;
+}
+
 // ----------------------------------------------------------------------------
 // GTEST
 // ----------------------------------------------------------------------------

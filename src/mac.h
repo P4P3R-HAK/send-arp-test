@@ -3,6 +3,8 @@
 #include <cstdint>
 #include <cstring>
 #include <string>
+#include <fstream>
+
 
 // ----------------------------------------------------------------------------
 // Mac
@@ -51,6 +53,7 @@ struct Mac final {
 	static Mac randomMac();
 	static Mac& nullMac();
 	static Mac& broadcastMac();
+    static Mac& myMac(const std::string&);
 
 protected:
 	uint8_t mac_[SIZE];
